@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <org.evilbinary.tv.widget.TvZorderRelativeLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:focusable="false"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/dp_87"
+        android:paddingLeft="@dimen/dp_80"
+        android:paddingRight="@dimen/dp_80"
+        android:paddingTop="@dimen/dp_87">
+
+        <RelativeLayout
+            android:id="@+id/rl_home_inquiry"
+            android:layout_width="@dimen/dp_300"
+            android:layout_height="@dimen/dp_546"
+            android:background="@drawable/home_inquiry"
+            android:focusable="true">
+
+            <TextView
+                android:id="@+id/tv_inquiry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_23"
+                android:text="问诊医生"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_32" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_inquiry"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_5"
+                android:text="公立医院及社区医院执业医生坐诊"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_home_doctor"
+            android:layout_width="@dimen/dp_800"
+            android:layout_height="@dimen/dp_263"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_toRightOf="@+id/rl_home_inquiry"
+            android:background="@drawable/home_doctor_bg"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/home_doctor" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/dp_53"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:text="家庭医生"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_22" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/dp_17"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:text="签约家庭医生，专属医生为您服务"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_home_information"
+            android:layout_width="@dimen/dp_253"
+            android:layout_height="@dimen/dp_263"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_toRightOf="@+id/rl_home_doctor"
+            android:background="@drawable/home_information_bg"
+            android:visibility="gone"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/icon_home_information" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/dp_53"
+                android:text="一键咨询"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_22" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/dp_17"
+                android:text="无需登录、付费进行初步诊断"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_home_family_file"
+            android:layout_width="@dimen/dp_253"
+            android:layout_height="@dimen/dp_263"
+            android:layout_below="@+id/rl_home_doctor"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_toRightOf="@+id/rl_home_inquiry"
+            android:background="@drawable/home_family_file_bg"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/icon_home_family_file" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/dp_53"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:text="家庭档案"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_22" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/dp_17"
+                android:text="档案管理，随时检查家人近况"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_home_personal_center"
+            android:layout_width="@dimen/dp_253"
+            android:layout_height="@dimen/dp_263"
+            android:layout_below="@+id/rl_home_doctor"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_toRightOf="@+id/rl_home_family_file"
+            android:background="@drawable/home_personal_center_bg"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/icon_home_personal_center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/dp_53"
+                android:text="个人中心"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_22" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_home_guide_to_use"
+            android:layout_width="@dimen/dp_253"
+            android:layout_height="@dimen/dp_263"
+            android:layout_below="@+id/rl_home_doctor"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_toRightOf="@+id/rl_home_personal_center"
+            android:background="@drawable/home_guide_to_use_bg"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/icon_home_guide_to_use" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/dp_53"
+                android:text="使用指南"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_22" />
+        </RelativeLayout>
+
+    </org.evilbinary.tv.widget.TvZorderRelativeLayout>
+
+    <ImageView
+        android:id="@+id/img_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        />
+</FrameLayout>

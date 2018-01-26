@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tool="http://schemas.android.com/tools">
+
+
+    <RelativeLayout
+        android:layout_width="937dp"
+        android:layout_height="604dp"
+        android:layout_gravity="center"
+        android:background="@drawable/card_info_bg"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="270dp"
+            android:layout_marginTop="36dp"
+            android:focusable="false"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="关系"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="346dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="26dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:src="@drawable/icon_arrow_left_blue" />
+
+
+                <cn.v1.kanglewanjia.view.RLoopRecyclerView
+                    android:id="@+id/recyclerView_role"
+                    android:layout_width="115dp"
+                    android:layout_height="125dp"
+                    android:layout_marginLeft="30dp"
+                    android:clipToPadding="false"
+                    android:focusable="false"
+                    android:padding="5dp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:focusable="false"
+                    android:src="@drawable/icon_arrow_right_blue" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_top"
+            android:layout_marginLeft="270dp"
+            android:layout_marginTop="26dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="姓名"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="346dp"
+                android:layout_height="56dp"
+                android:layout_marginLeft="26dp"
+                android:background="@drawable/selector_family_file_card_info_et"
+                android:focusable="true"
+                android:gravity="center"
+                android:hint="请输入持证人姓名"
+                android:maxLength="10"
+                android:textColor="@color/white"
+                android:textColorHint="#949598"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_name"
+            android:layout_marginLeft="252dp"
+            android:layout_marginTop="26dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="证件号"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/et_card_num"
+                android:layout_width="346dp"
+                android:layout_height="56dp"
+                android:layout_marginLeft="26dp"
+                android:background="@drawable/selector_family_file_card_info_et"
+                android:focusable="true"
+                android:gravity="center"
+                android:hint="请输入正确的证件号"
+                android:digits="0123456789xX"
+                android:maxLength="18"
+                tool:text="110101200001012913"
+                android:textColor="@color/white"
+                android:textColorHint="#949598"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_number"
+            android:layout_marginLeft="252dp"
+            android:layout_marginTop="26dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="证件照"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="346dp"
+                android:layout_height="220dp"
+                android:layout_marginLeft="26dp"
+                android:background="@drawable/card_img_info_bg"
+                android:clipChildren="true"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/img_camera"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="2.5dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_about_us" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_next"
+            android:layout_width="140dp"
+            android:layout_height="56dp"
+            android:layout_alignBottom="@+id/ll_img"
+            android:layout_marginLeft="33dp"
+            android:layout_toEndOf="@+id/ll_img"
+            android:background="@drawable/selector_dialog_button"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/img_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</FrameLayout>

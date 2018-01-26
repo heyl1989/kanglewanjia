@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/rc_voip_call_large_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:focusable="false"
+        >
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/rc_voip_call_small_preview"
+        android:layout_width="192dp"
+        android:layout_height="115dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_gravity="right|top"
+        android:visibility="visible">
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/rc_voip_call_information"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/rc_voip_user_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_below="@+id/rc_voip_call_minimize">
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rc_voip_audio_chat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rc_voip_btn"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="20dp"
+            android:visibility="gone"
+            android:focusable="true"
+            >
+
+            <ImageView
+                android:id="@+id/rc_voip_audio_chat_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/rc_voip_phone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rc_voip_audio_chat_btn"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/rc_voip_switch_to_audio"
+                style="@style/rc_voip_text_style_style" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/rc_voip_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+        </FrameLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/img_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        />
+</FrameLayout>

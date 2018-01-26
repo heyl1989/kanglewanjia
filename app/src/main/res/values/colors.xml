@@ -1,0 +1,17 @@
+<resources>
+    <color name="home_doctor_bg">#df5c61</color>
+    <color name="home_information_bg">#3E5587</color>
+    <color name="home_family_file_bg">#436DC8</color>
+    <color name="home_personal_center_bg">#F39800</color>
+    <color name="home_guide_to_use_bg">#8FC31F</color>
+    <color name="white">#ffffff</color>
+    <color name="family_doctor_title">#f1f1f1</color>
+    <color name="black_666">#666666</color>
+    <color name="red_price">#F8543B</color>
+    <color name="light_blue">#9ABEF4</color>
+    <color name="bg_black_alpha">#80000000</color>
+    <color name="white_alpha_50">#80ffffff</color>
+    <color name="blue">#0084fe</color>
+
+
+</resources>

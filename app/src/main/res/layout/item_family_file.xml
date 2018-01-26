@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:layout_gravity="center"
+    android:focusable="true"
+    android:id="@+id/partent"
+    >
+
+
+    <LinearLayout
+        android:layout_width="180dp"
+        android:layout_height="240dp"
+        android:padding="20dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="@drawable/select_file_item_bg"
+        >
+        <ImageView
+            android:id="@+id/round_imageview1"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:focusable="false"
+            android:src="@drawable/icon_dad"
+            />
+
+        <TextView
+            android:id="@+id/tv_role"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/round_imageview1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:text="妈妈（王盼）"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:focusable="false"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_button"
+        android:layout_width="180dp"
+        android:layout_height="240dp"
+        android:orientation="vertical"
+        android:background="#e6000000"
+        android:focusable="false"
+        android:gravity="center"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:id="@+id/tv_look"
+            android:layout_width="90dp"
+            android:layout_height="35dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/tv_role"
+            android:gravity="center"
+            android:text="查看"
+            android:textColor="@color/white"
+            android:background="@drawable/selector_family_file_button"
+            android:textSize="14sp"
+            android:focusable="true"
+            />
+
+        <TextView
+            android:id="@+id/tv_edit"
+            android:layout_width="90dp"
+            android:layout_height="35dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/tv_role"
+            android:gravity="center"
+            android:text="编辑"
+            android:textColor="@color/white"
+            android:background="@drawable/selector_family_file_button"
+            android:textSize="14sp"
+            android:focusable="true"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/tv_delete"
+            android:layout_width="90dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/tv_edit"
+            android:text="删除"
+            android:background="@drawable/selector_family_file_button"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:focusable="true"
+            />
+
+
+    </LinearLayout>
+
+
+
+</FrameLayout>

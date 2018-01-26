@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="358dp"
+    android:layout_height="260dp"
+    android:layout_gravity="center"
+    android:layout_marginRight="16dp"
+    android:layout_marginBottom="16dp"
+    android:background="@drawable/selector_nurse_come_service_focused"
+    android:orientation="vertical"
+    android:focusable="true"
+    >
+
+    <ImageView
+        android:id="@+id/img_pic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:src="@drawable/img_nurse_come_dazhen"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitXY"
+        />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="13dp"
+        android:layout_below="@+id/img_pic"
+        android:text="上门打针"
+        android:textSize="18sp"
+        android:textColor="#ffffff"
+        />
+    <TextView
+        android:id="@+id/tv_describe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="4dp"
+        android:singleLine="true"
+        android:layout_below="@+id/tv_title"
+        android:text="护士上门打针，肌肉注射"
+        android:textSize="16sp"
+        android:textColor="#66ffffff"
+        />
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="13dp"
+        android:layout_below="@+id/img_pic"
+        android:text="139元/次"
+        android:textSize="18sp"
+        android:textColor="#0084fe"
+        />
+</RelativeLayout>

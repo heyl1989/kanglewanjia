@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cn.v1.kanglewanjia.ui.nurse_order.NurseComeServiceIntroActivity">
+
+    <ScrollView
+        android:id="@+id/sv_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:layout_marginLeft="65dp"
+        android:clipToPadding="false"
+        android:paddingBottom="50dp"
+        android:paddingTop="50dp">
+
+        <LinearLayout
+            android:id="@+id/ll_left"
+            android:layout_width="432dp"
+            android:layout_height="594dp"
+            android:layout_below="@+id/tv_title"
+            android:background="@drawable/selector_nurse_come_service_focused"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="430dp"
+                android:layout_height="594dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/nurse_come_order_detail_left" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:layout_marginLeft="26dp"
+        android:paddingTop="50dp"
+        android:layout_toRightOf="@+id/sv_left"
+        android:clipToPadding="false"
+        android:paddingBottom="50dp">
+
+        <LinearLayout
+            android:layout_width="662dp"
+            android:layout_height="922dp"
+            android:background="@drawable/selector_nurse_come_service_focused"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="50dp"
+            android:paddingTop="77dp">
+
+            <ImageView
+                android:layout_width="646dp"
+                android:layout_height="856dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:src="@drawable/nurse_come_order_detail_right" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

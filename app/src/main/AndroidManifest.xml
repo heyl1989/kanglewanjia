@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.v1.kanglewanjia">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+    <uses-feature
+        android:name="android.software.leanback"
+        android:required="true" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ui.MainActivity"
+            android:banner="@mipmap/ic_launcher"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:logo="@mipmap/ic_launcher">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.family_file.FamilyFileActivity" />
+        <activity android:name=".ui.family_doctor.FamilyDoctorActivity" />
+        <activity android:name=".ui.PersonalCenterActivity" />
+        <activity android:name=".ui.family_doctor.FamilyDoctorDetailActivity" />
+        <activity android:name=".ui.inquiry_doctor.InquiryDoctorActivity" />
+        <activity android:name=".ui.inquiry_doctor.InquiryDoctorDetailActivity" />
+        <activity
+            android:name=".ui.SelectFamilyFileActivity"
+            android:theme="@style/SelectFileTheme" />
+        <activity
+            android:name=".ui.inquiry_doctor.InquiryPayMentActivity"
+            android:theme="@style/SelectFileTheme" />
+        <activity
+            android:name=".ui.family_doctor.FamilyDoctorPayMentActivity"
+            android:theme="@style/SelectFileTheme" />
+        <activity android:name=".ui.inquiry_order.OrderListActivity" />
+        <activity android:name=".ui.inquiry_order.OrderDetailActivity" />
+        <activity
+            android:name=".ui.DialogActivity"
+            android:theme="@style/SelectFileTheme" />
+        <activity
+            android:name=".ui.family_file.FamilyFileDetailActivity"
+            android:launchMode="singleTask"
+            />
+        <activity
+            android:name=".ui.DrugQRCodeActivity"
+            android:theme="@style/SelectFileTheme" />
+        <activity
+            android:name=".ui.LookDrugOrderActivity"
+            android:theme="@style/SelectFileTheme" />
+        <activity android:name=".ui.family_file.FamilyFileBasicInfoActivity" />
+        <activity
+            android:name="io.rong.callkit.SingleCallActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="io.rong.intent.action.voip.SINGLEVIDEO" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="io.rong.intent.action.voip.SINGLEAUDIO" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.guide_to_use.AboutUsActivity" />
+        <activity android:name=".ui.family_file.FamilyFileBindInfoActivity" />
+        <activity android:name=".ui.family_file.FamilyFileCardInfoActivity" />
+        <activity android:name=".ui.family_file.FamilyFileCardInfoActivity2" />
+        <activity android:name=".ui.family_file.FamilyFileCameraActivity" />
+        <activity android:name=".ui.family_doctor_order.PersonalFamilyDoctorActivity" />
+        <activity android:name=".ui.family_doctor_order.PersonalFamilyDoctorRecordActivity" />
+        <activity android:name=".ui.family_doctor_order.PersonalVideoRecordActivity" />
+        <activity android:name=".ui.family_doctor_order.PersonalMessageRecordActivity" />
+        <activity android:name=".ui.YiHuDaoJiaActivity" />
+        <activity android:name=".ui.OneKeyConsultationActivity" />
+        <activity android:name=".ui.LoginActivity" />
+        <activity android:name=".ui.inquiry_doctor.InquiryHospitalActivity" />
+        <activity android:name=".ui.inquiry_doctor.InquiryDepartmentActivity" />
+        <activity
+            android:name=".ui.inquiry_doctor.AllDepartmentActivity"
+            android:theme="@style/SelectFileTheme" />
+        <activity android:name=".ui.drug_order.DrugOrderListActivity" />
+        <activity android:name=".ui.nurse_order.NurseComeOrderListActivity" />
+        <activity android:name=".ui.test_order.MedicalTestOrderListActivity" />
+        <activity android:name=".ui.nurse_order.NurseComeActivity" />
+        <activity android:name=".ui.test_order.MedicalTestActivity" />
+        <activity android:name=".ui.drug_order.DrugActivity" />
+        <activity android:name=".ui.nurse_order.NurseComeServiceIntroActivity" />
+        <activity android:name=".ui.nurse_order.NurseComeFillInfoActivity" />
+        <activity android:name=".ui.nurse_order.MoreServiceActivity" />
+        <activity android:name=".ui.drug_order.DrugOrderDetailActivity" />
+        <activity android:name=".ui.nurse_order.NurseComeOrderDetailActivity" />
+        <activity android:name=".ui.test_order.MedicalTestOrderDetailActivity" />
+        <activity android:name=".ui.test_order.MedicalTestResultActivity" />
+        <activity android:name=".ui.PayMentActivity" />
+        <activity android:name=".ui.DrugSelectShopActivity" />
+        <activity android:name=".ui.EvaluateActivity" />
+        <activity android:name=".ui.drug_order.DrugFillInfoActivity" />
+        <activity android:name=".ui.address_manage.AdressListActivity" />
+        <activity android:name=".ui.address_manage.AddressEditActivity" />
+        <activity android:name=".ui.guide_to_use.GuideToUseListActivity" />
+        <activity android:name=".ui.guide_to_use.GuideToUseDetailActivity"></activity>
+    </application>
+
+</manifest>

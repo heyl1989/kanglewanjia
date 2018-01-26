@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cn.v1.kanglewanjia.ui.guide_to_use.AboutUsActivity">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="92dp"
+        android:text="关于我们"
+        android:textSize="26sp"
+        android:textColor="@color/family_doctor_title"
+        android:focusable="false"
+        />
+
+
+    <ImageView
+        android:id="@+id/img_about_us"
+        android:layout_width="324dp"
+        android:layout_height="207dp"
+        android:layout_below="@+id/tv_title"
+        android:layout_marginTop="43dp"
+        android:layout_marginLeft="80dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/img_about_us"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_line_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/img_about_us"
+        android:layout_below="@+id/tv_title"
+        android:layout_marginTop="43dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginRight="65dp"
+        android:lineSpacingExtra="12dp"
+        android:text="康乐万家视频问诊，是由第一视频集团专为有轻微不适症状、疑似患病、康复中行动不便、患有慢性病的中老、年人群，可以花最少的钱，通过网络电视由最正规、权威的医院医生进行视频诊治。"
+        android:textSize="20sp"
+        android:textColor="@color/family_doctor_title"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_line_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_line_one"
+        android:layout_toRightOf="@+id/img_about_us"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginRight="65dp"
+        android:lineSpacingExtra="12dp"
+        android:text="联合卫计委全面接入医疗保险体系、医院资源，让您和家人可以足不出户的享受专业权威的医疗服务。通过康乐万家视频问诊，您就可以享受医保全国联网，报销医药费的待遇。不仅如此，您的病历也将存储在医院系统当中，如您后续进行治疗，将作为分析数据，精确提供服务。"
+        android:textSize="20sp"
+        android:textColor="@color/family_doctor_title"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_logo"
+        android:layout_width="124dp"
+        android:layout_height="32dp"
+        android:layout_below="@+id/img_about_us"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="87dp"
+        android:background="#33ffffff"
+        android:gravity="center"
+        android:text="康乐万家"
+        android:textSize="24sp"
+        android:textColor="@color/family_doctor_title"
+        />
+
+    <TextView
+        android:id="@+id/tv_tell"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_logo"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="16dp"
+        android:text="联系电话：4000-123-789"
+        android:textSize="20sp"
+        android:textColor="@color/family_doctor_title"
+        />
+
+    <TextView
+        android:id="@+id/tv_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_tell"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="21dp"
+        android:text="邮箱：wangyan@v1.cn"
+        android:textSize="20sp"
+        android:textColor="@color/family_doctor_title"
+        />
+
+</RelativeLayout>

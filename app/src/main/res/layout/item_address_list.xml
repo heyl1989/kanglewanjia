@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginBottom="20dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:background="@drawable/selector_order_item_focused"
+    android:focusable="true"
+    >
+    <LinearLayout
+        android:layout_width="353dp"
+        android:layout_height="133dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:id="@+id/img_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_add_address"
+            android:visibility="gone"
+            />
+
+
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="29dp"
+            android:layout_marginRight="29dp"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/tv_name_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="张建新  15352524512"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                />
+            <TextView
+                android:id="@+id/tv_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="北京市朝阳区留坎镇锐创可以路128号"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_button"
+        android:layout_width="353dp"
+        android:layout_height="133dp"
+        android:orientation="vertical"
+        android:background="#e6000000"
+        android:focusable="false"
+        android:gravity="center"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:id="@+id/tv_look"
+            android:layout_width="123dp"
+            android:layout_height="35dp"
+            android:gravity="center"
+            android:text="使用"
+            android:textColor="@color/white"
+            android:background="@drawable/selector_family_file_button"
+            android:textSize="14sp"
+            android:focusable="true"
+            />
+
+        <TextView
+            android:id="@+id/tv_edit"
+            android:layout_width="123dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="编辑"
+            android:textColor="@color/white"
+            android:background="@drawable/selector_family_file_button"
+            android:textSize="14sp"
+            android:focusable="true"
+            />
+
+    </LinearLayout>
+
+</FrameLayout>
+

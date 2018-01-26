@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:focusable="false"
+    tools:context="cn.v1.kanglewanjia.ui.PersonalCenterActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:focusable="false">
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="1px"
+            android:focusable="true"
+            />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="80dp"
+            android:layout_marginRight="133dp"
+            android:focusable="false"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/icon_personal_center" />
+
+            <TextView
+                android:id="@+id/tv_user_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="11dp"
+                android:alpha="0.5"
+                android:text="1267886879"
+                android:textColor="@color/family_doctor_title"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_sign_out"
+                android:layout_width="40dp"
+                android:layout_height="25dp"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="38dp"
+                android:background="@drawable/selector_order_focused"
+                android:text="退出"
+                android:textColor="@color/family_doctor_title"
+                android:textSize="18sp"
+                android:focusable="true"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="65dp"
+            android:focusable="false"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="个人中心Personal center"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/icon_family_file_blue_line" />
+
+        </LinearLayout>
+        <!--org.evilbinary.tv.widget.TvZorderRelativeLayout-->
+        <RelativeLayout
+            android:id="@+id/main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="87dp"
+            android:layout_marginTop="173dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:focusable="false">
+
+            <RelativeLayout
+                android:id="@+id/rl_order"
+                android:layout_width="253dp"
+                android:layout_height="233dp"
+                android:background="@drawable/personal_center_order_bg"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="80dp"
+                    android:src="@drawable/icon_order" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginRight="20dp"
+                    android:text="问诊订单"
+                    android:textColor="@color/family_doctor_title"
+                    android:textSize="20sp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_medical_order"
+                android:layout_width="253dp"
+                android:layout_height="233dp"
+                android:layout_marginLeft="13dp"
+                android:layout_toRightOf="@+id/rl_order"
+                android:background="@drawable/personal_center_medical_order_bg"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="80dp"
+                    android:src="@drawable/icon_medical_order" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginRight="20dp"
+                    android:text="购药订单"
+                    android:textColor="@color/family_doctor_title"
+                    android:textSize="20sp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_manage_adress"
+                android:layout_width="253dp"
+                android:layout_height="233dp"
+                android:layout_marginLeft="13dp"
+                android:layout_toRightOf="@+id/rl_medical_order"
+                android:background="@drawable/personal_center_sign_out_bg"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="80dp"
+                    android:src="@drawable/icon_manage_address" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginRight="20dp"
+                    android:text="常用地址"
+                    android:textColor="@color/family_doctor_title"
+                    android:textSize="20sp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_medical_test_order"
+                android:layout_width="253dp"
+                android:layout_height="233dp"
+                android:layout_below="@+id/rl_medical_order"
+                android:layout_marginTop="13dp"
+                android:background="@drawable/personal_center_medical_test_bg"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="80dp"
+                    android:src="@drawable/icon_medical_test_order" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginRight="20dp"
+                    android:text="检验订单"
+                    android:textColor="@color/family_doctor_title"
+                    android:textSize="20sp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_doctor"
+                android:layout_width="253dp"
+                android:layout_height="233dp"
+                android:layout_below="@+id/rl_order"
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="13dp"
+                android:layout_toRightOf="@+id/rl_medical_test_order"
+                android:background="@drawable/personal_center_doctor_bg"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="80dp"
+                    android:src="@drawable/icon_personal_doctor" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginRight="20dp"
+                    android:text="家医留言"
+                    android:textColor="@color/family_doctor_title"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_about_us"
+                android:layout_width="380dp"
+                android:layout_height="227dp"
+                android:layout_below="@+id/rl_doctor"
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="13dp"
+                android:layout_toRightOf="@+id/rl_order"
+                android:background="@drawable/personal_center_about_us_bg"
+                android:focusable="true"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/img_about_us"
+                    android:layout_width="73dp"
+                    android:layout_height="73dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/icon_about_us" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img_about_us"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="11dp"
+                    android:text="关于我们"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_nurse_come"
+                android:layout_width="253dp"
+                android:layout_height="233dp"
+                android:layout_below="@+id/rl_order"
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="13dp"
+                android:layout_toRightOf="@+id/rl_doctor"
+                android:background="@drawable/personal_center_nurse_come_bg"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="80dp"
+                    android:src="@drawable/icon_nurse_come" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginRight="20dp"
+                    android:text="护士订单"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/img_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY" />
+</FrameLayout>

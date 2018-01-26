@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="933dp"
+    android:layout_height="533dp"
+    android:layout_marginTop="80dp"
+    android:layout_gravity="center_horizontal"
+    android:background="@drawable/nurse_come_bg"
+    android:orientation="vertical"
+    tools:context="cn.v1.kanglewanjia.ui.nurse_order.NurseComeActivity">
+    
+    <ImageView
+        android:layout_width="866dp"
+        android:layout_height="206dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="26dp"
+        android:src="@drawable/img_nurse_come"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginLeft="36dp"
+        android:text="医护到家"
+        android:textSize="22dp"
+        android:textColor="@color/white"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="36dp"
+        android:text="医护到家作为全国唯一一家三甲护士集团，为您的安康保驾护航"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="36dp"
+        android:layout_marginRight="36dp"
+        android:layout_marginTop="52dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="护士上门："
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView1"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="24dp"
+            android:clipToPadding="false"
+            android:focusable="false"
+            />
+
+        <TextView
+            android:id="@+id/tv_more1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:text="更多>>"
+            android:textSize="14sp"
+            android:textColor="@color/selector_nurse_come_color"
+            android:focusable="true"
+            />
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="36dp"
+        android:layout_marginRight="36dp"
+        android:layout_marginTop="22dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="产后母婴："
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView2"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="24dp"
+            android:clipToPadding="false"
+            android:focusable="false"
+            />
+
+        <TextView
+            android:id="@+id/tv_more2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:text="更多>>"
+            android:textSize="14sp"
+            android:textColor="@color/selector_nurse_come_color"
+            android:focusable="true"
+            />
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="36dp"
+        android:layout_marginRight="36dp"
+        android:layout_marginTop="22dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="推拿按摩："
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView3"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="24dp"
+            android:clipToPadding="false"
+            android:focusable="false"
+            />
+
+        <TextView
+            android:id="@+id/tv_more3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:text="更多>>"
+            android:textSize="14sp"
+            android:textColor="@color/selector_nurse_come_color"
+            android:focusable="true"
+            />
+
+
+
+    </LinearLayout>
+</LinearLayout>

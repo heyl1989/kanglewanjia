@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="cn.v1.kanglewanjia.ui.nurse_order.MoreServiceActivity">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="87dp"
+        android:layout_marginTop="60dp"
+        android:text="护士上门"
+        android:textSize="26sp"
+        android:textColor="@color/family_doctor_title"
+        android:focusable="false"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="wrap_content"
+        android:layout_height="552dp"
+        android:paddingLeft="87dp"
+        android:paddingRight="87dp"
+        android:layout_marginTop="20dp"
+        android:clipToPadding="false"
+        android:focusable="false"
+        />
+
+</LinearLayout>

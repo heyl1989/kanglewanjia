@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/partent"
+    android:layout_width="170dp"
+    android:layout_height="244dp"
+    android:layout_gravity="center"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:background="@drawable/select_file_item_bg"
+    android:focusable="true"
+    android:orientation="vertical">
+    <ImageView
+        android:id="@+id/img_family_avatar"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="26dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/icon_doctor_default" />
+    <TextView
+        android:id="@+id/tv_family_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_gravity="center_horizontal"
+        android:text="爸爸"
+        android:textColor="@color/white_alpha_50"
+        android:textSize="12sp" />
+
+    <RelativeLayout
+        android:layout_width="140dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/select_file_item_text_bg"
+        android:layout_marginTop="20dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="身份证"
+            android:textSize="14dp"
+            android:textColor="@color/family_doctor_title"
+            />
+
+        <ImageView
+            android:id="@+id/img_have_idcard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/icon_right"
+            />
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="140dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/select_file_item_text_bg"
+        android:layout_marginTop="5dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="医保"
+            android:textSize="14dp"
+            android:textColor="@color/family_doctor_title"
+            />
+
+        <ImageView
+            android:id="@+id/img_hava_medical_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/icon_wrong"
+            />
+
+
+    </RelativeLayout>
+</LinearLayout>

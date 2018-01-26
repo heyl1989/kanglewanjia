@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context="cn.v1.kanglewanjia.ui.inquiry_doctor.AllDepartmentActivity">
+
+    
+    <RelativeLayout
+        android:layout_width="713dp"
+        android:layout_height="333dp"
+        android:background="@drawable/department_bg"
+        android:clipChildren="false"
+        >
+        <GridView
+            android:id="@+id/gridView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:verticalSpacing="26dp"
+            android:horizontalSpacing="20dp"
+            android:numColumns="4"
+            android:scrollbars="none"
+            android:paddingTop="60dp"
+            android:paddingLeft="60dp"
+            android:paddingRight="60dp"
+            android:paddingBottom="60dp"
+            android:focusable="false"
+            android:clipToPadding="false"
+            android:clipChildren="false"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

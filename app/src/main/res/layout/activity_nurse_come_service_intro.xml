@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cn.v1.kanglewanjia.ui.nurse_order.NurseComeServiceIntroActivity">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="65dp"
+        android:layout_marginTop="60dp"
+        android:focusable="false"
+        android:text="医嘱检验"
+        android:textColor="@color/family_doctor_title"
+        android:textSize="26sp" />
+
+    <LinearLayout
+        android:id="@+id/ll_left"
+        android:layout_width="432dp"
+        android:layout_height="526dp"
+        android:orientation="vertical"
+        android:layout_below="@+id/tv_title"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="65dp"
+        android:gravity="center_horizontal"
+        android:background="@drawable/medical_test_order_bg"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/img_service_introduction_left"
+            />
+        <TextView
+            android:id="@+id/tv_btn"
+            android:layout_width="148dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/selector_dialog_button"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="立即预约"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:layout_toRightOf="@+id/ll_left"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="26dp"
+        android:paddingBottom="50dp"
+        android:clipToPadding="false"
+        >
+        <LinearLayout
+            android:layout_width="662dp"
+            android:layout_height="1834dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/selector_nurse_come_service_focused"
+            android:focusable="true"
+            android:paddingTop="77dp"
+            android:paddingBottom="50dp"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_service_introduction_right"
+                />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

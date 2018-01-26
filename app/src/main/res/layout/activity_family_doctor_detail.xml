@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="false"
+    tools:context="cn.v1.kanglewanjia.ui.family_doctor.FamilyDoctorDetailActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="false">
+
+
+        <LinearLayout
+            android:id="@+id/ll_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"
+            android:focusable="false"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="医生详情Doctor Details"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/icon_family_file_blue_line" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginTop="88dp"
+            android:focusable="false">
+
+            <include
+                layout="@layout/item_family_doctor"
+                android:focusable="false" />
+
+            <TextView
+                android:id="@+id/tv_doctor_price_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="22dp"
+                android:layout_toRightOf="@+id/partent"
+                android:focusable="false"
+                android:text="签约价格"
+                android:textColor="@color/light_blue"
+                android:textSize="18sp"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/tv_doctor_price_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_doctor_price_title"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="22dp"
+                android:layout_toRightOf="@+id/partent"
+                android:focusable="false"
+                android:lineSpacingExtra="11dp"
+                android:text="10000元/365天"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/tv_doctor_summary_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_doctor_price_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="22dp"
+                android:layout_toRightOf="@+id/partent"
+                android:focusable="false"
+                android:text="医生介绍"
+                android:textColor="@color/light_blue"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_doctor_summary_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_doctor_summary_title"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="22dp"
+                android:layout_toRightOf="@+id/partent"
+                android:focusable="false"
+                android:lineSpacingExtra="11dp"
+                android:text="刘晓红，消化内科教授、主任医师，医学博士、理学博士，博士导师，老年示范病房主任。1982年毕业于北京医科大学医疗系，1982年毕业于北京医科大学，1990年北京医科大学第三医院消化科获医学博士学位，1995年日本九州大学医学部获医学理学博士学位（Ph.D）。2011年赴美国约翰霍普金斯老年医学科学习3个月。"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_doctor_declaration_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_doctor_summary_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="25dp"
+                android:layout_toRightOf="@+id/partent"
+                android:focusable="false"
+                android:text="家庭医生说明"
+                android:textColor="@color/light_blue"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_doctor_declaration_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_doctor_declaration_title"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="22dp"
+                android:layout_toRightOf="@+id/partent"
+                android:focusable="false"
+                android:lineSpacingExtra="11dp"
+                android:text="1.家庭医生会为您的一家人免费提供医疗咨询服务。\n2.家庭医生会定期为您发送一些阶段性总结，您可以在‘我的’里查看。\n3.根据病情需求，家庭医生也可以为您开具处方和病历。\n4.如果您对购买的家庭医生有任何意见和建议，可致电4000-123-789，我们将竭诚为您服务。"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_confirm_inquiry"
+                android:layout_width="125dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/tv_doctor_declaration_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="50dp"
+                android:layout_toRightOf="@+id/partent"
+                android:background="@drawable/confirm_inquiry_button"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="签约医生"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_line"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_call_out"
+        android:focusable="true"
+        android:visibility="gone"
+        >
+        <cn.v1.kanglewanjia.view.CircleImageView
+            android:id="@+id/img_doctor_avator_line"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_marginTop="130dp"
+            android:layout_centerHorizontal="true"
+            tools:src="@drawable/img_yihu" />
+
+        <TextView
+            android:id="@+id/tv_doctor_name_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:layout_below="@+id/img_doctor_avator_line"
+            android:layout_centerHorizontal="true"
+            android:text="医生"
+            android:textColor="@color/white"
+            android:textSize="32sp" />
+
+        <TextView
+            android:id="@+id/tv_line_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_below="@+id/tv_doctor_name_line"
+            android:layout_centerHorizontal="true"
+            android:text="当前有一人在排队，请稍后。。。"
+            android:textColor="@color/light_blue"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="30dp"
+            android:src="@drawable/icon_hang_up"
+            />
+
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/img_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY" />
+</FrameLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="false"
+    tools:context="cn.v1.kanglewanjia.ui.SelectFamilyFileActivity">
+
+    <View
+        android:layout_width="1px"
+        android:layout_height="1px"
+        android:focusable="true"
+        />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:layout_centerHorizontal="true"
+        android:text="请选择需要问诊的家人档案，以便形成您的历史病历以及医保的使用"
+        android:textSize="18sp"
+        android:textColor="#80ffffff"
+        android:focusable="false"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="wrap_content"
+        android:layout_height="294dp"
+        android:layout_centerVertical="true"
+        android:paddingTop="25dp"
+        android:paddingBottom="25dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:focusable="false"
+       />
+
+
+    <TextView
+        android:id="@+id/tv_add_file"
+        android:layout_width="155dp"
+        android:layout_height="44dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="65dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:background="@drawable/selector_family_file_button"
+        android:text="添加档案"
+        android:textSize="18dp"
+        android:textColor="@color/white"
+        android:focusable="true"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_add_file"
+        android:layout_marginBottom="30dp"
+        android:layout_centerHorizontal="true"
+        tools:text="(0/5)"
+        android:textSize="12sp"
+        android:textColor="@color/light_blue"
+        android:focusable="false"
+        />
+
+</RelativeLayout>

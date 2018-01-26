@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/partent"
+    android:layout_width="269dp"
+    android:layout_height="369dp"
+    android:layout_gravity="center"
+    android:background="@drawable/selector_doctor_item_focused"
+    android:focusable="true"
+    android:gravity="center">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="225dp"
+        android:layout_height="325dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/family_doctor_item_bg"
+        android:focusable="false"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:id="@+id/rl_top"
+            android:layout_width="match_parent"
+            android:layout_height="155dp">
+
+            <ImageView
+                android:id="@+id/img_doctor_avatar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/img_doctor_avator5" />
+
+            <TextView
+                android:id="@+id/tv_doctor_state"
+                android:layout_width="38dp"
+                android:layout_height="18dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="6dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/family_file_button_white_bg"
+                android:gravity="center"
+                android:text="离线"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_below="@+id/rl_top">
+
+            <TextView
+                android:id="@+id/tv_doctor_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="18dp"
+                android:text="林种种"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/tv_inquiry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_doctor_name"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="14dp"
+                android:drawableLeft="@drawable/icon_inquiry"
+                android:drawablePadding="10dp"
+                android:text="签约日2017年11月11日"
+                android:textColor="@color/black_666"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_department"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_inquiry"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/icon_department"
+                android:drawablePadding="10dp"
+                android:text="骨科 主任医师"
+                android:textColor="@color/black_666"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_hospital"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_department"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/icon_hospital"
+                android:drawablePadding="10dp"
+                android:text="望京博雅诊所"
+                android:textColor="@color/black_666"
+                android:textSize="12sp" />
+            <TextView
+                android:id="@+id/tv_patient"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_hospital"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/icon_link_patient"
+                android:drawablePadding="10dp"
+                android:text="望京博雅诊所"
+                android:textColor="@color/black_666"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_price_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="20dp"
+                android:text="100天"
+                android:textColor="@color/red_price"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tv_price_unit"
+                android:layout_toLeftOf="@+id/tv_price_unit"
+                android:text="剩余"
+                android:textColor="@color/black_666"
+                android:textSize="12sp" />
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</RelativeLayout>

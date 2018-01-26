@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="370dp"
+    android:layout_height="wrap_content"
+    android:padding="50dp"
+    android:orientation="vertical"
+    android:background="@drawable/dialog_bg"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:focusable="false"
+    tools:context="cn.v1.kanglewanjia.ui.DialogActivity">
+
+
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="7dp"
+        android:text="档案删除后，无法恢复，只能重新添加。您是否要删除此档案？"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:focusable="false"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal"
+        android:focusable="false"
+        >
+
+        <TextView
+            android:id="@+id/tv_confirm"
+            android:layout_width="125dp"
+            android:layout_height="45dp"
+            android:background="@drawable/selector_dialog_button"
+            android:gravity="center"
+            android:text="是，删除"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:focusable="true"
+            />
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="125dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/selector_dialog_button"
+            android:gravity="center"
+            android:text="否，点错了"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:focusable="true"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>

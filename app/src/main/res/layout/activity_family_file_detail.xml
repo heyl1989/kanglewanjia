@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cn.v1.kanglewanjia.ui.family_file.FamilyFileDetailActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:focusable="false"
+        android:paddingLeft="80dp"
+        android:paddingTop="87dp">
+
+        <LinearLayout
+            android:id="@+id/ll_top"
+            android:layout_width="493dp"
+            android:layout_height="220dp"
+            android:focusable="false"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_family_file_detail"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:orientation="vertical"
+                    >
+                    <ImageView
+                        android:id="@+id/img_role"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_yeye"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_role"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="bottom|center_horizontal"
+                        android:textColor="@color/white"
+                        android:textSize="22sp"
+                        android:text="babba"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="40dp"
+                    >
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/white"
+                        android:textSize="22sp"
+                        android:text="姓名：网是接口"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_age"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/white"
+                        android:textSize="22sp"
+                        android:text="年龄：79"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_edit"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/selector_family_file_detail_edit"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="编辑"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:visibility="gone"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_bind_medical"
+            android:layout_width="230dp"
+            android:layout_height="293dp"
+            android:layout_below="@+id/ll_top"
+            android:layout_marginTop="33dp"
+            android:background="@drawable/selector_family_file_detail"
+            android:focusable="true"
+            android:orientation="vertical">
+            <FrameLayout
+                android:id="@+id/fr_medical_info"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="30dp"
+                    android:paddingBottom="30dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="社保卡号："
+                        android:textSize="14sp"
+                        android:textColor="@color/white"
+                        />
+                    <TextView
+                        android:id="@+id/tv_medical_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="632198767789089"
+                        android:textSize="12sp"
+                        android:textColor="@color/white"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="22dp"
+                        android:text="手持证件照："
+                        android:textSize="14sp"
+                        android:textColor="@color/white"
+                        />
+
+                    <ImageView
+                        android:id="@+id/img_medical_card"
+                        android:layout_width="190dp"
+                        android:layout_height="109dp"
+                        android:layout_marginTop="10dp"
+                        android:scaleType="fitXY"
+                        />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/img_medical_card_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/icon_passed"
+                    android:visibility="gone"
+                    />
+
+            </FrameLayout>
+            <LinearLayout
+                android:id="@+id/ll_to_bind_medical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="暂无绑定"
+                    android:textSize="14sp"
+                    android:textColor="#1affffff"
+                    />
+
+                <TextView
+                    android:layout_width="125dp"
+                    android:layout_height="35dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/dialog_button_not_focused"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:text="绑定医保卡"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_bind_id"
+            android:layout_width="230dp"
+            android:layout_height="293dp"
+            android:layout_below="@+id/ll_top"
+            android:layout_marginLeft="33dp"
+            android:layout_marginTop="33dp"
+            android:layout_toRightOf="@+id/ll_bind_medical"
+            android:background="@drawable/selector_family_file_detail"
+            android:focusable="true"
+            android:orientation="vertical">
+            <FrameLayout
+                android:id="@+id/fr_id_info"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="30dp"
+                    android:paddingBottom="30dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="身份证号："
+                        android:textSize="14sp"
+                        android:textColor="@color/white"
+                        />
+                    <TextView
+                        android:id="@+id/tv_id_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="632198767789089"
+                        android:textSize="12sp"
+                        android:textColor="@color/white"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="22dp"
+                        android:text="手持证件照："
+                        android:textSize="14sp"
+                        android:textColor="@color/white"
+                        />
+
+                    <ImageView
+                        android:id="@+id/img_id_card"
+                        android:layout_width="190dp"
+                        android:layout_height="109dp"
+                        android:layout_marginTop="10dp"
+                        android:scaleType="fitXY"
+                        />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/img_id_card_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/icon_passed"
+                    android:visibility="gone"
+                    />
+
+            </FrameLayout>
+            <LinearLayout
+                android:id="@+id/ll_to_bind_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="暂无绑定"
+                    android:textSize="14sp"
+                    android:textColor="#1affffff"
+                    />
+
+                <TextView
+                    android:layout_width="125dp"
+                    android:layout_height="35dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/dialog_button_not_focused"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:text="绑定身份证"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="593dp"
+            android:layout_height="597dp"
+            android:layout_marginBottom="-50dp"
+            android:layout_marginLeft="33dp"
+            android:layout_toRightOf="@+id/ll_top"
+            android:clipToPadding="false"
+            android:focusable="false" />
+
+        <LinearLayout
+            android:id="@+id/ll_no_history"
+            android:layout_width="593dp"
+            android:layout_height="547dp"
+            android:background="@drawable/selector_family_file_detail"
+            android:layout_toRightOf="@+id/ll_top"
+            android:layout_marginLeft="33dp"
+            android:gravity="center"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="暂无病例"
+                android:textSize="20sp"
+                />
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="410dp"
+            android:layout_toRightOf="@+id/recyclerView"
+            android:visibility="gone"
+            android:focusable="false">
+
+            <TextView
+                android:id="@+id/tv_focuesed_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="72dp"
+                android:layout_marginTop="230dp"
+                android:focusable="false"
+                android:text="1/1"
+                android:textColor="@color/light_blue"
+                android:textSize="18sp" />
+
+
+            <TextView
+                android:id="@+id/tv_drug_code"
+                android:layout_width="167dp"
+                android:layout_height="47dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="33dp"
+                android:background="@drawable/selector_dialog_button"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="处方二维码"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_look_drug"
+                android:layout_width="167dp"
+                android:layout_height="47dp"
+                android:layout_above="@+id/tv_drug_code"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="33dp"
+                android:background="@drawable/selector_dialog_button"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="查看处方"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/img_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        />
+</FrameLayout>

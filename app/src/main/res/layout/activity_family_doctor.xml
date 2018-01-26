@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="false"
+    tools:context="cn.v1.kanglewanjia.ui.family_doctor.FamilyDoctorActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="47dp"
+        android:layout_marginTop="31dp"
+        android:focusable="false"
+        android:text="康乐万家互联网医院"
+        android:textColor="@color/family_doctor_title"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:typeface="sans"
+        android:visibility="gone"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="65dp"
+        android:focusable="false"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="家庭医生Family Doctor"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/icon_family_file_blue_line" />
+
+    </LinearLayout>
+
+
+    <cn.v1.kanglewanjia.view.CustomRecycleView
+        android:id="@+id/recyclerView"
+        android:layout_width="wrap_content"
+        android:layout_height="419dp"
+        android:layout_centerVertical="true"
+        android:clipToPadding="false"
+        android:focusable="false"
+        android:padding="25dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_focuesd_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="65dp"
+        android:textColor="#9ABEF4"
+        android:textSize="12sp"
+        android:text="(1/11)"
+        />
+
+
+</RelativeLayout>

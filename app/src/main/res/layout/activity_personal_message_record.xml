@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="false"
+    tools:context="cn.v1.kanglewanjia.ui.family_doctor.FamilyDoctorDetailActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="false">
+
+
+        <LinearLayout
+            android:id="@+id/ll_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"
+            android:focusable="false"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="医生回复"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/icon_family_file_blue_line" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginTop="88dp"
+            android:focusable="false">
+
+            <include
+                layout="@layout/item_personal_family_doctor"
+                android:focusable="false" />
+
+            <TextView
+                android:id="@+id/tv_doctor_message_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="22dp"
+                android:layout_toRightOf="@+id/partent"
+                android:focusable="false"
+                android:text="医生回复"
+                android:textColor="@color/light_blue"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_doctor_message_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_doctor_message_title"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="22dp"
+                android:layout_toRightOf="@+id/partent"
+                android:focusable="false"
+                android:lineSpacingExtra="11dp"
+                android:text="可以去医院做心电图，心脏彩超检查一下，可以服用黄杨宁，银杏叶，硝酸甘油等药物，保持心情舒畅，不要过度紧张焦虑。"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/img_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY" />
+</FrameLayout>

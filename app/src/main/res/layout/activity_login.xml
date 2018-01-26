@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:focusable="false"
+    android:layout_gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="cn.v1.kanglewanjia.ui.LoginActivity">
+
+    <ImageView
+        android:layout_width="@dimen/dp_73"
+        android:layout_height="@dimen/dp_73"
+        android:layout_marginTop="@dimen/dp_128"
+        android:layout_gravity="center_horizontal"
+        android:focusable="false"
+        android:src="@drawable/icon_login" />
+
+    <LinearLayout
+        android:layout_width="@dimen/dp_452"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_34"
+        android:focusable="false"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:focusable="false"
+            android:text="手机号"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_18" />
+
+        <EditText
+            android:id="@+id/et_phone_number"
+            android:layout_width="@dimen/dp_382"
+            android:layout_height="@dimen/dp_52"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:background="@drawable/selector_login_et"
+            android:focusable="true"
+            android:hint="请输入中国大陆11位手机号码"
+            android:inputType="number"
+            android:maxLength="11"
+            android:paddingLeft="@dimen/dp_30"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_18"
+            android:text="13810205545" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="@dimen/dp_452"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_14"
+        android:focusable="false"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:focusable="false"
+            android:text="验证码"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_18" />
+
+        <EditText
+            android:id="@+id/et_verification_code"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_52"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_weight="1"
+            android:background="@drawable/selector_login_et"
+            android:focusable="true"
+            android:hint="请输入6位验证码"
+            android:inputType="number"
+            android:maxLength="6"
+            android:paddingLeft="@dimen/dp_30"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_18"
+            tools:text="" />
+
+        <TextView
+            android:id="@+id/tv_send"
+            android:layout_width="@dimen/dp_113"
+            android:layout_height="@dimen/dp_52"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:background="@drawable/selector_login_button"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="发送短信"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_20" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_login"
+        android:layout_width="@dimen/dp_382"
+        android:layout_height="@dimen/dp_52"
+        android:layout_marginTop="@dimen/dp_82"
+        android:layout_gravity="right"
+        android:background="@drawable/selector_login_button"
+        android:focusable="true"
+        android:gravity="center"
+        android:text="登录"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_22" />
+
+</LinearLayout>

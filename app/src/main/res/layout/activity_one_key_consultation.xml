@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="false"
+    tools:context="cn.v1.kanglewanjia.ui.family_doctor.FamilyDoctorDetailActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="false"
+        >
+
+        <LinearLayout
+            android:id="@+id/ll_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="60dp"
+            android:focusable="false"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="医生详情Doctor Details"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/icon_family_file_blue_line" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginTop="97dp"
+            android:gravity="center"
+            android:focusable="false">
+
+            <include
+                layout="@layout/item_inquiry_doctor"
+                android:focusable="false"
+                />
+
+            <TextView
+                android:id="@+id/tv_doctor_summary_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_doctor_service_fee_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="23dp"
+                android:layout_toRightOf="@+id/partent"
+                android:focusable="false"
+                android:text="医生介绍"
+                android:textColor="@color/light_blue"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_doctor_summary_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_doctor_summary_title"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="22dp"
+                android:layout_toRightOf="@+id/partent"
+                android:focusable="false"
+                android:lineSpacingExtra="11dp"
+                android:text="刘晓红，消化内科教授、主任医师，医学博士、理学博士，博士导师，老年示范病房主任。1982年毕业于北京医科大学医疗系，1982年毕业于北京医科大学，1990年北京医科大学第三医院消化科获医学博士学位，1995年日本九州大学医学部获医学理学博士学位（Ph.D）。2011年赴美国约翰霍普金斯老年医学科学习3个月。"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+
+
+            <TextView
+                android:id="@+id/tv_confirm_inquiry"
+                android:layout_width="125dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="50dp"
+                android:layout_toRightOf="@+id/partent"
+                android:layout_below="@+id/tv_doctor_summary_content"
+                android:layout_marginTop="23dp"
+                android:background="@drawable/confirm_inquiry_button"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="排队问诊"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/img_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY" />
+
+    </FrameLayout>
+</RelativeLayout>

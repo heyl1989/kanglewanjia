@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cn.v1.kanglewanjia.ui.inquiry_doctor.InquiryDepartmentActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:text="医院"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <LinearLayout
+            android:id="@+id/ll_select_department"
+            android:layout_width="146dp"
+            android:layout_height="32dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="60dp"
+            android:layout_marginTop="84dp"
+            android:background="@drawable/selector_family_file_button"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_select_department"
+                android:drawablePadding="8dp"
+                android:text="请选择科室"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_common_disease"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_title"
+            android:layout_marginLeft="87dp"
+            android:layout_marginTop="26dp"
+            android:text="常见病"
+            android:textColor="@color/white"
+            android:textSize="26sp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView1"
+            android:layout_width="wrap_content"
+            android:layout_height="233dp"
+            android:layout_below="@+id/tv_common_disease"
+            android:paddingLeft="87dp"
+            android:layout_marginTop="24dp"
+            android:clipToPadding="false"
+            android:focusable="false" />
+
+        <TextView
+            android:id="@+id/tv_slow_disease"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/recyclerView1"
+            android:layout_marginLeft="87dp"
+            android:layout_marginTop="26dp"
+            android:text="慢性病"
+            android:textColor="@color/white"
+            android:textSize="26sp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView2"
+            android:layout_width="wrap_content"
+            android:layout_height="233dp"
+            android:layout_below="@+id/tv_slow_disease"
+            android:paddingLeft="87dp"
+            android:layout_marginTop="24dp"
+            android:clipToPadding="false"
+            android:focusable="false" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/img_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        />
+</FrameLayout>
