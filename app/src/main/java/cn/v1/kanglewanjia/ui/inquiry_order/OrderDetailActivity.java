@@ -199,7 +199,10 @@ public class OrderDetailActivity extends BaseActivity {
             case R.id.img_drug_code:
                 Bitmap bmp1 = FastBlurUtility.getBlurBackgroundDrawer(OrderDetailActivity.this);
                 imgBg.setImageBitmap(bmp1);
-                goNewActivity(DrugQRCodeActivity.class);
+                Intent qrIntent = new Intent(context,DrugQRCodeActivity.class);
+                qrIntent.putExtra("orderId",orderId);
+                qrIntent.putExtra("doctorId",doctorId);
+                startActivity(qrIntent);
                 break;
         }
     }

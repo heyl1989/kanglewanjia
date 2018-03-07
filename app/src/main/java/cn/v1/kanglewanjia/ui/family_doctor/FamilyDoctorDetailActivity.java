@@ -96,13 +96,13 @@ public class FamilyDoctorDetailActivity extends BaseActivity {
             ActivityManagerUtil.getInstance().finishActivity(this);
         }else{
             if (isLine) {
-                return;
-            }else{
                 imgBg.setImageResource(R.drawable.bg);
                 Intent intent = new Intent(context, DialogActivity.class);
                 intent.putExtra("from", "exitInquiryFamilyDoctor");
                 intent.putExtra("orderId", orderId);
                 startActivity(intent);
+            }else{
+                ActivityManagerUtil.getInstance().finishActivity(this);
             }
         }
     }

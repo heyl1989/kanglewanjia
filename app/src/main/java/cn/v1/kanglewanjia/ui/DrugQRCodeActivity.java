@@ -8,6 +8,8 @@ import android.widget.TextView;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import cn.v1.kanglewanjia.R;
+import cn.v1.kanglewanjia.data.Common;
+import cn.v1.kanglewanjia.data.SPUtil;
 import cn.v1.kanglewanjia.util.ZXingUtils;
 
 public class DrugQRCodeActivity extends BaseActivity {
@@ -25,7 +27,18 @@ public class DrugQRCodeActivity extends BaseActivity {
     }
 
     private void initView() {
-        Bitmap bitmap = ZXingUtils.createQRImage("http://www.yihu365.com/kangle/images/chufangok.jpg", 480, 480);
+        String orderId = "";
+        String doctorId = "";
+        if (getIntent().hasExtra("orderId")) {
+            orderId = getIntent().getStringExtra("orderId");
+        }
+        if (getIntent().hasExtra("doctorId")) {
+            doctorId = getIntent().getStringExtra("doctorId");
+        }
+        String baseURL = "http://111.198.169.114:8088/page/klwj/prescription.jsp";
+        String url = baseURL + "?orderId=" + orderId + "&doctorId="  + doctorId + "&token=" +
+                (String) SPUtil.get(context, Common.USER_TOKEN,"");
+        Bitmap bitmap = ZXingUtils.createQRImage(url, 480, 480);
         imgDrugCode.setImageBitmap(bitmap);
     }
 }

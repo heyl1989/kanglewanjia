@@ -1,58 +1,46 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.neenbedankt.android-apt'
+
 android {
 
+    signingConfigs {
+        config {
+            keyAlias 'windo'
+            keyPassword 'hangzhouwindo'
+            storeFile file('/windo')
+            storePassword 'hangzhouwindo'
+        }
+    }
+
     compileSdkVersion 26
-    buildToolsVersion '26.0.1'
+    buildToolsVersion '26.0.2'
     defaultConfig {
         applicationId "com.vodone.o2o.hulianwangyy_guizhou.demander"
 //        com.vodone.o2o.hulianwangyy_guizhou.demander
         minSdkVersion 17
-        targetSdkVersion 25
+        targetSdkVersion 23
         versionCode 1
         versionName "1.0"
-
         ndk {
             abiFilters "armeabi-v7a", "x86"
         }
+        signingConfig signingConfigs.config
     }
 
-
-    signingConfigs {
-        debug {
-            keyAlias 'windo'
-            keyPassword 'hangzhouwindo'
-            storeFile file('windo')
-            storePassword 'hangzhouwindo'
-        }
-        release {
-            keyAlias 'windo'
-            keyPassword 'hangzhouwindo'
-            storeFile file('windo')
-            storePassword 'hangzhouwindo'
-        }
-    }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
         }
-    }
-
-    lintOptions{
-        checkReleaseBuilds false
-        abortOnError false
+        debug {
+            signingConfig signingConfigs.config
+        }
     }
 
 }
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile project(':borderLib')
-    compile project(':CallKit')
-    compile project(':CallLib')
-    compile project(':IMKit')
-    compile project(':IMLib')
     compile files('libs/ocr-sdk.jar')
     compile 'com.android.support:leanback-v17:22.2.1'
     compile 'com.jakewharton:butterknife:7.0.1'
@@ -65,6 +53,11 @@ dependencies {
     compile 'com.github.bumptech.glide:glide:3.5.2'
     compile 'com.jaywei:compresstool:1.0.4'
     compile 'com.contrarywind:Android-PickerView:3.2.7'
-    apt 'com.jakewharton:butterknife:7.0.1'
+    annotationProcessor 'com.jakewharton:butterknife:7.0.1'
     compile files('libs/core-3.2.1.jar')
+    implementation project(':borderLib')
+    implementation project(':CallKit')
+    implementation project(':CallLib')
+    implementation project(':IMKit')
+    implementation project(':IMLib')
 }

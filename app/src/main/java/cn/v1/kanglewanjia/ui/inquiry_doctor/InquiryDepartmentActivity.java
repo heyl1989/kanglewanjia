@@ -248,7 +248,6 @@ public class InquiryDepartmentActivity extends BaseActivity {
                     }else{
                         Bitmap bmp = FastBlurUtility.getBlurBackgroundDrawer(InquiryDepartmentActivity.this);
                         imgBg.setImageBitmap(bmp);
-                        goNewActivity(SelectFamilyFileActivity.class);
                         Intent intent = new Intent(context,SelectFamilyFileActivity.class);
                         intent.putExtra("hosDepId",departsMxbDatas.get(position).getHosDepId()+"");
                         intent.putExtra("doctorId",departsMxbDatas.get(position).getDoctorId()+"");

@@ -19,6 +19,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import cn.v1.kanglewanjia.R;
+import cn.v1.kanglewanjia.model.InquiryOrderDetailData;
 import cn.v1.kanglewanjia.model.PatientDrugData;
 import cn.v1.kanglewanjia.ui.drug_order.DrugActivity;
 import cn.v1.kanglewanjia.ui.inquiry_doctor.InquiryDepartmentActivity;
@@ -48,11 +49,12 @@ public class EvaluateActivity extends BaseActivity {
     private boolean[] speciality = new boolean[5];
     private boolean[] service = new boolean[5];
     private boolean[] timely = new boolean[5];
+    private final int CONFIRM_EVALUATE = 100;
+    private final int CANCEL_EVALUATE = 200;
     private View focusedView;
     private String orderId = "";
     private String orderType = "";
     private String doctorId;
-    private boolean hasDrug = false;
     private List<PatientDrugData.DataData.MedicineListData> drugDatas = new ArrayList<>();
 
     @Override
@@ -66,57 +68,31 @@ public class EvaluateActivity extends BaseActivity {
     }
 
     @Override
-    public void onBackPressed() {}
+    public void onBackPressed() {
+    }
 
     @OnClick({R.id.tv_confirm_evaluate, R.id.tv_cancel_evaluate})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.tv_confirm_evaluate:
-                if(hasDrug){
-                    Intent intent1 = new Intent(context, DrugActivity.class);
-                    intent1.putExtra("from","call");
-                    intent1.putExtra("orderId",orderId);
-                    intent1.putExtra("orderType",orderType);
-                    startActivity(intent1);
-                }else{
-                    Intent intent = new Intent(context,OrderDetailActivity.class);
-                    intent.putExtra("orderId",orderId);
-                    intent.putExtra("orderType",orderType);
-                    startActivity(intent);
-                }
-                showTost("评价成功");
-                finish();
+                getOrderDetail(CONFIRM_EVALUATE);
                 break;
             case R.id.tv_cancel_evaluate:
-                if(hasDrug){
-                    Intent intent2 = new Intent(context, DrugActivity.class);
-                    intent2.putExtra("from","call");
-                    intent2.putExtra("orderId",orderId);
-                    intent2.putExtra("orderType",orderType);
-                    intent2.putExtra("drugList", (Serializable) drugDatas);
-                    startActivity(intent2);
-                }else{
-                    Intent intent = new Intent(context,OrderDetailActivity.class);
-                    intent.putExtra("orderId",orderId);
-                    intent.putExtra("orderType",orderType);
-                    startActivity(intent);
-                }
-                finish();
+                getOrderDetail(CANCEL_EVALUATE);
                 break;
         }
     }
 
     private void initData() {
-        if(getIntent().hasExtra("orderId")){
+        if (getIntent().hasExtra("orderId")) {
             orderId = getIntent().getStringExtra("orderId");
         }
-        if(getIntent().hasExtra("orderType")){
+        if (getIntent().hasExtra("orderType")) {
             orderType = getIntent().getStringExtra("orderType");
         }
-        if(getIntent().hasExtra("doctorId")){
+        if (getIntent().hasExtra("doctorId")) {
             doctorId = getIntent().getStringExtra("doctorId");
         }
-        getPrescriptionInfo();
     }
 
     private void closeOtherActivity() {
@@ -128,21 +104,94 @@ public class EvaluateActivity extends BaseActivity {
     }
 
     /**
+     * 获取订单详情
+     */
+    private void getOrderDetail(final int type) {
+        showDialog();
+        bindObservable(mAppClient.getOrderDetail(orderId, orderType), new Action1<InquiryOrderDetailData>() {
+            @Override
+            public void call(InquiryOrderDetailData data) {
+                closeDialog();
+                if (TextUtils.equals("0000", data.getCode())) {
+                    //订单状态：0-初始；1-待服务；2-已服务；3-已取消
+                    String orderState = data.getData().getOrderStatus() + "";
+                    if (TextUtils.equals("2", orderState)) {
+                        getPrescriptionInfo(type);
+                    } else {
+                        if (CONFIRM_EVALUATE == type) {
+                            Intent intent = new Intent(context, OrderDetailActivity.class);
+                            intent.putExtra("orderId", orderId);
+                            intent.putExtra("orderType", orderType);
+                            startActivity(intent);
+                            showTost("评价成功");
+                            finish();
+                        }
+                        if (CANCEL_EVALUATE == type) {
+                            Intent intent = new Intent(context, OrderDetailActivity.class);
+                            intent.putExtra("orderId", orderId);
+                            intent.putExtra("orderType", orderType);
+                            startActivity(intent);
+                            finish();
+                        }
+                    }
+                } else {
+                    showTost(data.getMessage());
+                }
+            }
+        }, new Action1<Throwable>() {
+            @Override
+            public void call(Throwable throwable) {
+                closeDialog();
+            }
+        });
+    }
+
+    /**
      * 获取处方信息
      */
-    private void getPrescriptionInfo() {
+    private void getPrescriptionInfo(final int type) {
         showDialog();
         bindObservable(mAppClient.getPrescriptionInfo(orderId, doctorId), new Action1<PatientDrugData>() {
             @Override
             public void call(PatientDrugData data) {
                 closeDialog();
                 if (TextUtils.equals("0000", data.getCode())) {
-                    if(null != data.getData()){
-                        if(null != data.getData().getMedicineList()){
-                            if(data.getData().getMedicineList().size() != 0){
-                                hasDrug = true;
-                                drugDatas.addAll(data.getData().getMedicineList());
-                            }
+                    if (null != data.getData() && null != data.getData().getMedicineList() && data.getData().getMedicineList().size() != 0) {
+                        drugDatas.addAll(data.getData().getMedicineList());
+                        if (CONFIRM_EVALUATE == type) {
+                            Intent intent1 = new Intent(context, DrugActivity.class);
+                            intent1.putExtra("from", "call");
+                            intent1.putExtra("orderId", orderId);
+                            intent1.putExtra("orderType", orderType);
+                            intent1.putExtra("drugList", (Serializable) drugDatas);
+                            startActivity(intent1);
+                            showTost("评价成功");
+                            finish();
+                        }
+                        if (CANCEL_EVALUATE == type) {
+                            Intent intent2 = new Intent(context, DrugActivity.class);
+                            intent2.putExtra("from", "call");
+                            intent2.putExtra("orderId", orderId);
+                            intent2.putExtra("orderType", orderType);
+                            intent2.putExtra("drugList", (Serializable) drugDatas);
+                            startActivity(intent2);
+                            finish();
+                        }
+                    }else{
+                        if (CONFIRM_EVALUATE == type) {
+                            Intent intent = new Intent(context, OrderDetailActivity.class);
+                            intent.putExtra("orderId", orderId);
+                            intent.putExtra("orderType", orderType);
+                            startActivity(intent);
+                            showTost("评价成功");
+                            finish();
+                        }
+                        if (CANCEL_EVALUATE == type) {
+                            Intent intent = new Intent(context, OrderDetailActivity.class);
+                            intent.putExtra("orderId", orderId);
+                            intent.putExtra("orderType", orderType);
+                            startActivity(intent);
+                            finish();
                         }
                     }
                 } else {
@@ -194,22 +243,22 @@ public class EvaluateActivity extends BaseActivity {
 
         @Override
         public void onBindViewHolder(final ViewHolder holder, final int position) {
-            if(list[position]){
+            if (list[position]) {
                 holder.imgStar.setImageResource(R.drawable.icon_star_selected);
-            }else{
+            } else {
                 holder.imgStar.setImageResource(R.drawable.icon_star);
             }
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    for(int i = 0 ; i < list.length; i++ ){
-                        if(i < position+1){
+                    for (int i = 0; i < list.length; i++) {
+                        if (i < position + 1) {
                             list[i] = true;
-                        }else{
+                        } else {
                             list[i] = false;
                         }
                     }
-                    for(int i = 0; i < list.length; i++){
+                    for (int i = 0; i < list.length; i++) {
                         notifyItemChanged(i);
                     }
 //                    notifyItemRangeChanged(0,5);
@@ -240,6 +289,7 @@ public class EvaluateActivity extends BaseActivity {
         class ViewHolder extends RecyclerView.ViewHolder {
             @Bind(R.id.img_star)
             ImageView imgStar;
+
             public ViewHolder(View itemView) {
                 super(itemView);
                 ButterKnife.bind(this, itemView);

@@ -23,6 +23,7 @@
         android:id="@+id/tv_diseases"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:lines="3"
         android:lineSpacingExtra="5dp"
         android:layout_marginTop="20dp"
         android:text="肺气肿、哮喘、风热感冒支气管肺炎、气胸、淹溺中毒、非典、百日咳等"
